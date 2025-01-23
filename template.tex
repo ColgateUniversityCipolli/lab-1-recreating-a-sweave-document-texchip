@@ -217,12 +217,12 @@ We can also call object values from R directly.
 \hldef{result.with.error}
 \end{alltt}
 \begin{verbatim}
-## [1] 41.01503
+## [1] 40.98915
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
 
-The result is 41.0150272. Note that I did not type the result, but I used the \verb|\Sexpr{}| command.
+The result is 40.98915. Note that I did not type the result, but I used the \verb|\Sexpr{}| command.
 
 \subsection{Plotting}
 \noindent We can also plot with R.
@@ -282,7 +282,7 @@ If we want to print this nicely, we can do so using the xtable package \citep{xt
 \end{knitrout}
 
 % latex table generated in R 4.4.2 by xtable 1.8-4 package
-% Thu Jan 23 15:30:44 2025
+% Thu Jan 23 16:02:12 2025
 \begin{table}[H]
 \centering
 \begingroup\small
@@ -306,7 +306,6 @@ Rural Male & Rural Female & Urban Male & Urban Female \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{2em}
 
 \begin{tiny}
 \bibliography{bib}
@@ -322,6 +321,43 @@ Rural Male & Rural Female & Urban Male & Urban Female \\
 
 \noindent Below is a table from a paper I’m currently working on. Without the analysis object in R, I have to create this table myself.
 
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ l  r  r  r  r  r}\hline
+Term & SS (Type III) & df  & F & p-value & $\epsilon_p^2$ \\\hline
+(Intercept) & 4.95 & 1.00 & 5.37 & 0.0209 & \\
+White-Poor (\textit{Z}) & 3.17 & 1.00 & 3.44 & 0.0642 & 0.02 \\
+Zero-Sum (\textit{Z}) & 17.96 & 1.00 & 19.48 & $<$ 0.0001 & 0.03 \\
+Education (\textit{Z}) & 0.39 & 1.00 & 0.42 & 0.5161 & 0.00 \\
+Income (\textit{Z}) & 0.16 & 1.00 & 0.17 & 0.6817 & 0.00 \\
+Democrat & 9.60 & 1.00 & 10.42 & 0.0013 & 0.02 \\
+Black-Poor (\textit{Z}) & 1.92 & 1.00 & 2.08 & 0.1496 & 0.00 \\
+White-Poor (\textit{Z})$\times$Zero-Sum (\textit{Z}) & 7.96 & 1.00 & 8.63 & 0.0034 & 0.01 \\
+Residuals & 506.92 & 550.00 &  &  & \\\hline
+\end{tabular} \label{full.sleep.tab}
+\caption{ANOVA table for Case Study I.}
+\end{center}
+\end{table}
 
+The \texttt{palmerpenguins} package for \texttt{R} \citep{palmer} provides data on adult foraging penguins near Palmer Station, Antarctica. Figure \ref{plot2} is too big to fit nicely in our column-based-template above, so I’ve placed it here in the abstract by saving it and presenting it scaled to 0.75.
+
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{library}\hldef{(palmerpenguins)}
+\hlkwd{pdf}\hldef{(}\hlsng{"figure/penguins.pdf"}\hldef{,} \hlkwc{width} \hldef{=} \hlnum{8}\hldef{,} \hlkwc{height} \hldef{=} \hlnum{5}\hldef{)}
+\hlkwd{plot}\hldef{(penguins)}
+\hlkwd{dev.off}\hldef{()}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.75]{figure/penguins.pdf}
+\caption{Data on adult foraging penguins near Palmer Station, Antarctica.}
+\label{plot2}
+\end{center}
+\end{figure}
 
 \end{document}
