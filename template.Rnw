@@ -67,20 +67,52 @@ We can center text in Sweave.
 \end{center}
 
 \subsection{Bold, Italics, and Underlining}
+\noindent We can \textbf{bold}, \textit{italicize}, \underline{underline}, and \emph{emphasize} test in Sweave.
 
-\section{Methods}
-Describe the data you are working with, if applicable. Describe the specific process you will follow to answer the question at hand. This does not mean you should write something like this.
-\begin{quote}
-\textit{I did this and then I did that and then I did this other thing and then..., and then..., and then...}
-\end{quote}
-Instead, it should provide a clear and concise narrative that flows from the problem specification in the Introduction to how you will approach answering it. This is where I would expect to see some citations for \texttt{R} packages you will use to conduct the statistical analysis reported in the Results section.
+Note, I did a column break here so that the list wasn’t broken across columns.
+\columnbreak
 
+\subsection{Lists, and Numbered Lists}
 
-\subsection{Methods Subsection}
-Much like the Introduction, subsections can be helpful for the Methods section. For example, you might describe data collection and the statistical analyses of the collected data in different subsections. Or, you may have different questions that require distinct methods. 
+\noindent We can write an unordered list in Sweave.
+\begin{itemize}\itemsep0em
+\item first item
+\item second item
+\item third item
+\end{itemize}
+\noindent We can write a numbered list in Sweave.
+\begin{enumerate}[1.]\itemsep0em
+\item first item
+\item second item
+\item third item
+\end{enumerate}
+\noindent We can write a lettered list in Sweave.
+\begin{enumerate}[a.]\itemsep0em
+\item first item
+\item second item
+\item third item
+\end{enumerate}
 
-\section{Results}
-Tie together the Introduction -- where you introduce the problem at hand -- and the methods --  what you propose to do to answer the question. Present your data, the results of your analyses, and how each reported aspect contributes to answering the question. This section should include table(s), statistic(s), and graphical displays. Make sure to put the results in a sensible order and that each result contributes a logical and developed solution. It should not just be a list. Avoid being repetitive. 
+\subsection{Submissions}
+This part of the midterm is due Sunday November 14 by 5p. I will not accept late submissions. Note that you may use this template to help build your introduction and methods sections, and you can use the work you did as a group during the datathon. Still, I expect this submission to be your own summary and extension of that work without collaboration.
+
+\subsection{Typing Mathematical Equations}
+\noindent We can write a one line equation that is centered like this
+\[\widehat{y_i} = \beta_0 + \beta_1 x_{1i}+ \beta_2 x_{2i} + \epsilon_i.\]
+\noindent This can be written in the text, as $\widehat{y_i} = \beta_0 + \beta_1 x_{1i}+ \beta_2 x_{2i} + \beta_3 x_{1i}x_{2i} + \epsilon_i$ using as well.
+
+When we need to show multiple steps, we can create a multi-line equation that is centered like this:
+\begin{align*}
+8(x-5) + x &= 9(x-5) + 5 \\
+8x - 40 + x &= 9x - 45 + 5 \tag{Distributing} \\
+9x - 40 &= 9x - 40 \tag{Combining like terms} \\
+9x &= 9x \tag{Adding 40 to both sides} \\
+x &= x \tag{Dividing both sides by 9}
+\end{align*}
+\noindent The equality holds for any $x$.
+
+Note, I did a page break here so that the next section started on a clean page.
+\newpage
 
 \subsection{Results Subsection}
 Subsections can be helpful for the Results section, too. This can be particularly helpful if you have different questions to answer. 
